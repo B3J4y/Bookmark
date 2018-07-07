@@ -8,6 +8,7 @@ public class Entity {
     @GeneratedValue
     private Long id;
     String title;
+    boolean isTestObject;
 
     public Long getId() {
         return id;
@@ -20,5 +21,13 @@ public class Entity {
 
     public void setTitle(String title) {
         this.title = title;
+    }
+
+    public boolean isTestObject() {
+        return isTestObject;
+    }
+
+    public void setAsTestObject(boolean isTestObject) {
+        this.isTestObject = isTestObject;
     }
 }

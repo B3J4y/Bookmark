@@ -1,30 +1,11 @@
 package de.duckbase.bmt.entity;
 
-import java.util.ArrayList;
-import java.util.List;
-
-public class TaggedLink {
-
-    private String title;
+public class TaggedLink extends TaggedEntity {
     private String url;
-    private List<String> tags;
 
-    public TaggedLink(String title, String url) {
-        this.title = title;
+    public TaggedLink(String title, String url, boolean isTestObject) {
+        super(title, isTestObject);
         this.url = url;
-        tags = new ArrayList<>();
-    }
-
-    public void addTag(String tag) {
-        tags.add(tag);
-    }
-
-    public List<String> getTags() {
-        return tags;
-    }
-
-    public String getTitle() {
-        return title;
     }
 
     public String getUrl() {

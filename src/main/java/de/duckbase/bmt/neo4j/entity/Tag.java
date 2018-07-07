@@ -11,7 +11,6 @@ public class Tag extends Entity {
     Set<NodeLink> nodeLinks;
 
     public Tag() {
-       // nodeLinks = new HashSet<>();
     }
 
     public Tag(String title) {

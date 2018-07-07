@@ -8,8 +8,6 @@ import java.util.Set;
 
 @NodeEntity
 public class NodeLink extends Entity {
-
-
     @Relationship(type="TAGGED_BY")
     Set<Tag> tags;
 

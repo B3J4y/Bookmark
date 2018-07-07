@@ -1,7 +1,6 @@
 package de.duckbase.bmt.action;
 
 import de.duckbase.bmt.database.TagDatabase;
-import de.duckbase.bmt.entity.TaggedLink;
 import de.duckbase.bmt.io.DataReceiver;
 
 public class LinkBuilder {
@@ -15,9 +14,5 @@ public class LinkBuilder {
 
     public void saveInDB() {
         database.createEntities(receiver.getLinks());
-        for (TaggedLink taggedLink : receiver.getLinks()) {
-            taggedLink.getTags().forEach(database::addTag);
-            database.addLink(taggedLink.getTitle(), taggedLink.getUrl());
-        }
     }
 }
